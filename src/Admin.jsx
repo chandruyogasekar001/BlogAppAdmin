@@ -18,7 +18,7 @@ function Admin() {
 
   const fetchGroups = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/groups');
+      const response = await fetch('https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups');
       const data = await response.json();
       setGroups(data.data);
     } catch (error) {
@@ -29,7 +29,7 @@ function Admin() {
   const handleAddGroup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/groups', {
+      const response = await fetch('https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function Admin() {
 
   const handleAddHeading = async (groupId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/groups/${groupId}/headings`, {
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${groupId}/headings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ function AdminPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/groups');
+        const response = await fetch('https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

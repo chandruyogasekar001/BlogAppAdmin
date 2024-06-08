@@ -15,7 +15,7 @@ function DeleteSubheadingPage() {
 
   const fetchGroups = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/groups');
+      const response = await fetch('https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups');
       const data = await response.json();
       setGroups(data.data);
     } catch (error) {
@@ -28,7 +28,7 @@ function DeleteSubheadingPage() {
     e.preventDefault();
     try {
       // Perform delete operation here
-      const response = await fetch(`http://localhost:5000/api/groups/${selectedGroup}/headings/${selectedHeading}/subheadings/${selectedSubheading}`, {
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${selectedGroup}/headings/${selectedHeading}/subheadings/${selectedSubheading}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -48,7 +48,7 @@ function DeleteSubheadingPage() {
     
     try {
       // Perform group delete operation here
-      const response = await fetch(`http://localhost:5000/api/groups/${selectedGroup}`, {
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${selectedGroup}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -71,7 +71,7 @@ function DeleteSubheadingPage() {
   const handleHeadingDelete = async () => {
     try {
       // Perform heading delete operation here
-      const response = await fetch(`http://localhost:5000/api/groups/${selectedGroup}/headings/${selectedHeading}`, {
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${selectedGroup}/headings/${selectedHeading}`, {
         method: 'DELETE',
       });
       if (response.ok) {

@@ -13,7 +13,7 @@ function HeadingsPage() {
     const fetchGroups = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/groups');
+        const response = await fetch('https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -38,7 +38,7 @@ function HeadingsPage() {
     setSelectedGroupId(groupId);
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/groups/${groupId}/headings`);
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${groupId}/headings`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -84,7 +84,7 @@ function HeadingsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(headings),
       };
-      const response = await fetch(`http://localhost:5000/api/groups/${selectedGroupId}/headings`, requestOptions);
+      const response = await fetch(`https://blogapp-admin-server-git-main-chandruyogasekar001s-projects.vercel.app/api/groups/${selectedGroupId}/headings`, requestOptions);
       if (!response.ok) {
         throw new Error('Failed to save changes');
       }
